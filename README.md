@@ -1,4 +1,3 @@
-# sirmodel
 ======
 SIR Model
 ======
