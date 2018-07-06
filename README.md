@@ -16,6 +16,6 @@ $ conda install scipy numpy sympy matplotlib Click Pillow
 
 To open the interface:
 
-$ python sir.py
+$ python SIR/sir.py
 
 
