@@ -33,7 +33,6 @@ def entry(S0_entry,I0_entry,R0_entry,infection_entry,removed_entry, Start_entry,
     t = np.linspace(time[0],time[1],time[2])
     args = (infection_entry, removed_entry)
     X = integrate.odeint(solvr, init, t, args)
-    
     fig = Figure()
     a = fig.add_subplot(3,1,1)
     ax=a.plot(t,X[:,0])
@@ -152,8 +151,10 @@ def initial_conditions_entry(a,b,c,d,e,f): #extracts user inputs of infection an
 
 def solvr(X, t, infection_entry, removed_entry):
     S, I, R = X
+    N = S+I+R
+    print(N)
     P=parameters_entry(infection_entry, removed_entry)
-    E = [-P[0]/N*S*I,P[0]/N*S*I-P[1]*I,P[1]*I]
+    E = [-P[0]/N*S*I,P[0]/N*S*I-P[1]*I, P[1]*I]
     return E
     #return [0.5*S-S*I*0.01,-0.5*I+S*I*0.01,0] y0=[80,100,0] a=0.5 b=0.01 t0=0 tf=50
 
