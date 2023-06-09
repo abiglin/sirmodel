@@ -168,7 +168,7 @@ Stop_entry.place(x=65,y=205)
 Steps_label.place(x=125,y=170)
 Steps_entry.place(x=125,y=205)
 
-canvas1 = Canvas(bottom)
+canvas1 = Canvas(top)
 canvas1.create_text(10,325,text="System:"+"\n"+"  dS / dt = -(α / N) * S * I"+"\n"+"  dI / dt = (α / N) * S * I - β * I"+"\n"+"  dR / dt = β * I"+"\n"+"\n"+"  α: infection by contact"+"\n"+"  β: death by infection"+"\n"+"  N: total population (=S+I+R)",font=labelFont,activefill='red',justify=LEFT)
 canvas1.create_text(10,375,text="Initial Conditions, Parameters:",font=labelFont,activefill='red',justify=LEFT)
 canvas1.pack()
