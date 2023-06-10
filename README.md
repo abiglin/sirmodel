@@ -8,10 +8,10 @@ Installation:
 * To avoid version conflicts, please use conda virtual environment and install sirmodel in it: 
 
 $ conda list
-  (Look for python in the list outputed. If not 2.7.n, please run: 
-   conda install python=2.7)
+  (Look for python in the list outputed. If not 2.7.n, run: conda install python=2.7)
 
 $ git clone https://github.com/abiglin/sirmodel.git
+  (If git is not found, input the following code before the above line: conda install -c anaconda git)
 
 $ cd sirmodel
 
