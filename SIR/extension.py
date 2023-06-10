@@ -47,18 +47,18 @@ def main():
     eqFont=tkFont.Font(family="Helvetica", size=20)
 
     canvas = Canvas(top, width=1000, height=1200, bg = '#4e7a7a')
-    canvas.create_text(500,60,text="In this part, consider the 'real-life' event below:"+"\n"
+    canvas.create_text(450,60,text="In this part, consider the 'real-life' event below:"+"\n"
                        +"A new strain of virus M521, M521mut has escaped the safety protocol of a UNC BME lab."+"\n"
                        +"CDC has been informed and is closely monitoring the spread of the strain."+"\n"
                        +"The rival neighbor of the outbreak lab has also been working on an anti-M521 pill for years."+"\n"
                        +"However, this antivirual drug can only guarantee temporary immunity against the new strain.",font=labelFont,justify=LEFT)
     
-    canvas.create_text(625,200, text="Some facts about M521mut:"+"\n"
+    canvas.create_text(575,200, text="Some facts about M521mut:"+"\n"
                        +"1) The susceptible individuals first go through a latent period after infection, and before becoming infectious."+"\n"
                        +"2) An infected individual is either quarantined or offered the anti-viral drug, and acquires temporary immunity either way."+"\n"
                        +"  (hint: which population does one belong to when they acquire temporary immunity?)"+"\n",font=labelFont,justify=LEFT)
     
-    canvas.create_text(550,350,text="Other facts:"+"\n"
+    canvas.create_text(500,350,text="Other facts:"+"\n"
                        +"1) We can assume in the beginning of the outbreak, only the susceptible population is non-zero."+"\n"
                        +"2) The susceptible population grows at a constant rate."+"\n"
                        +"3) There is a natural mortality rate in all populations."+"\n"
@@ -172,10 +172,10 @@ def create_paras (master, p):
     for n in range(0, m):  
         name = Entry(master, bd=0, width=5, bg="#f7f3bb")
         name.pack(side=LEFT)
-        name.place(x=40,y=640+30*n)
+        name.place(x=50,y=640+30*n)
         num = Entry(master, bd=0, width=5, bg="#f7f3bb")
         num.pack(side=LEFT)
-        num.place(x=120,y=640+30*n)
+        num.place(x=110,y=640+30*n)
 
 
 def coding_instruction ():
