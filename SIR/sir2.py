@@ -45,7 +45,7 @@ def enter():
 
     '''
 top = Tk()
-top.geometry("300x600")
+top.geometry("1000x600")
 top.title("SIR Model")
 top_textframe = Frame(top)
 
@@ -178,3 +178,4 @@ Steps_entry.place(x=175,y=210)
     
 
 top.mainloop()
+
