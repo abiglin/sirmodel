@@ -11,15 +11,16 @@ $ conda list
   (Look for python in the list outputed. If not 2.7.n, please run: 
    conda install python=2.7)
 
-$ git clone https://github.com/maggiecdagger/sirmodel.git
+$ git clone https://github.com/abiglin/sirmodel.git
 
 $ cd sirmodel
 
-$ conda install scipy numpy sympy Click Pillow matplotlib=2.1.0
+$ cd SIR
 
+$ conda install scipy numpy sympy Click Pillow matplotlib=2.1.0
 
 To open the interface:
 
-$ python SIR/sir.py
+$ python sir2.py
 
 
