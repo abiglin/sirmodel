@@ -212,18 +212,18 @@ def coding_instruction ():
                        +"6) Go back to the 'Beyond SIR' window. Click on 'Start Graphing'."+"\n"
                        +"    Save your graph with a proper title."
                        ,font=labelFont,justify=LEFT)
-    
-    #example_img1 = PIL.Image.open("exampleImg_1.png")
-    #photo1 = PIL.ImageTk.PhotoImage(example_img1)
-    #canvas.create_image(50, 290, anchor=NW, image=photo1)
 
-    #example_img2 = PIL.Image.open("exampleImg_2.png")    
-    #photo2 = PIL.ImageTk.PhotoImage(example_img2)
-    #canvas.create_image(50, 490, anchor=NW, image=photo2)
+    example_img1 = PIL.Image.open("exampleImg_1.png")
+    photo1 = PIL.ImageTk.PhotoImage(example_img1)
+    canvas.create_image(50, 450, anchor=NW, image=photo1)
+
+    example_img2 = PIL.Image.open("exampleImg_2.png")    
+    photo2 = PIL.ImageTk.PhotoImage(example_img2)
+    canvas.create_image(50, 675, anchor=NW, image=photo2)
     
-    #example_img3 = PIL.Image.open("exampleImg_3.png")    
-    #photo3 = PIL.ImageTk.PhotoImage(example_img3)
-    #canvas.create_image(350, 490, anchor=NW, image=photo3)
+    example_img3 = PIL.Image.open("exampleImg_3.png")    
+    photo3 = PIL.ImageTk.PhotoImage(example_img3)
+    canvas.create_image(350, 675, anchor=NW, image=photo3)
     
     canvas.pack()
     new.mainloop()
