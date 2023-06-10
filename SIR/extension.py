@@ -78,10 +78,10 @@ def main():
 
 
     pars_name_label = Label(top, bd=0, text="symbol",width=8, bg='#4e7a7a')
-    pars_name_label_window = canvas.create_window(30, 600,anchor=NW, window=pars_name_label)
+    pars_name_label_window = canvas.create_window(30, 615,anchor=NW, window=pars_name_label)
         
     pars_num_label = Label(top, bd=0, text="value",width=8, relief=FLAT, bg='#4e7a7a')
-    pars_num_label_window = canvas.create_window(100, 600,anchor=NW, window=pars_num_label)
+    pars_num_label_window = canvas.create_window(100, 615,anchor=NW, window=pars_num_label)
 
     paras_list = OrderedDict()
     
@@ -136,27 +136,27 @@ def create_sys_input_box (master, p):
     for n in range(0, m):
             v1_label = Label( master, bd=0, text="d",width=1, relief=RAISED)
             v1_label.pack(side=LEFT)
-            v1_label.place(x=361,y=400+n*30)
+            v1_label.place(x=361,y=640+n*30)
 
             v_entry = Entry(master, bd=0, width=2, bg="#cc5b2a")
             v_entry.pack(side=LEFT)
-            v_entry.place(x=375,y=400+n*30)
+            v_entry.place(x=375,y=640+n*30)
         
             v2_label = Label( master, bd=0, text="/ dt = ",width=4, relief=RAISED)
             v2_label.pack(side=LEFT)
-            v2_label.place(x=400,y=400+n*30)
+            v2_label.place(x=400,y=640+n*30)
         
             eq_entry = Entry(master, bd=1, width=35, bg="#cc5b2a")
             eq_entry.pack(side=LEFT)
-            eq_entry.place(x=435,y=400+n*30)
+            eq_entry.place(x=435,y=640+n*30)
 
             ic_label = Label( master, bd=0, text="IC",width=4, relief=RAISED)
             ic_label.pack(side=LEFT)
-            ic_label.place(x=805,y=370)
+            ic_label.place(x=670,y=610)
 
             ic_entry = Entry(master, bd=0, width=5, bg="#cc5b2a")
             ic_entry.pack(side=LEFT)
-            ic_entry.place(x=805,y=400+n*30)
+            ic_entry.place(x=670,y=640+n*30)
 
     
 def create_paras (master, p):
@@ -172,10 +172,10 @@ def create_paras (master, p):
     for n in range(0, m):  
         name = Entry(master, bd=0, width=5, bg="#f7f3bb")
         name.pack(side=LEFT)
-        name.place(x=40,y=420+30*n)
+        name.place(x=40,y=640+30*n)
         num = Entry(master, bd=0, width=5, bg="#f7f3bb")
         num.pack(side=LEFT)
-        num.place(x=120,y=420+30*n)
+        num.place(x=120,y=640+30*n)
 
 
 def coding_instruction ():
