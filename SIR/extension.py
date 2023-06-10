@@ -47,18 +47,18 @@ def main():
     eqFont=tkFont.Font(family="Helvetica", size=20)
 
     canvas = Canvas(top, width=1000, height=1200, bg = '#4e7a7a')
-    canvas.create_text(300,60,text="In this part, consider the 'real-life' event below:"+"\n"
+    canvas.create_text(500,60,text="In this part, consider the 'real-life' event below:"+"\n"
                        +"A new strain of virus M521, M521mut has escaped the safety protocol of a UNC BME lab."+"\n"
                        +"CDC has been informed and is closely monitoring the spread of the strain."+"\n"
                        +"The rival neighbor of the outbreak lab has also been working on an anti-M521 pill for years."+"\n"
                        +"However, this antivirual drug can only guarantee temporary immunity against the new strain.",font=labelFont,justify=LEFT)
     
-    canvas.create_text(450,160, text="Some facts about M521mut:"+"\n"
+    canvas.create_text(625,200, text="Some facts about M521mut:"+"\n"
                        +"1) The susceptible individuals first go through a latent period after infection, and before becoming infectious."+"\n"
                        +"2) An infected individual is either quarantined or offered the anti-viral drug, and acquires temporary immunity either way."+"\n"
                        +"  (hint: which population does one belong to when they acquire temporary immunity?)"+"\n",font=labelFont,justify=LEFT)
     
-    canvas.create_text(400,260,text="Other facts:"+"\n"
+    canvas.create_text(550,350,text="Other facts:"+"\n"
                        +"1) We can assume in the beginning of the outbreak, only the susceptible population is non-zero."+"\n"
                        +"2) The susceptible population grows at a constant rate."+"\n"
                        +"3) There is a natural mortality rate in all populations."+"\n"
@@ -71,38 +71,38 @@ def main():
 
     pars_label = Label(top, text=" Number of Parameters: ",font=labelFont)
     pars_label.configure(width=20, background='#f2ec8a', relief = FLAT)
-    pars_label_window = canvas.create_window(40, 340,anchor=NW, window=pars_label)
+    pars_label_window = canvas.create_window(40, 540,anchor=NW, window=pars_label)
     
     pars_entry = Entry(top, bd=1, width=5, bg="#f2ec8a")
-    pars_entry_window = canvas.create_window(40, 370,anchor=NW, window=pars_entry)
+    pars_entry_window = canvas.create_window(40, 570,anchor=NW, window=pars_entry)
 
 
     pars_name_label = Label(top, bd=0, text="symbol",width=8, bg='#4e7a7a')
-    pars_name_label_window = canvas.create_window(30, 400,anchor=NW, window=pars_name_label)
+    pars_name_label_window = canvas.create_window(30, 600,anchor=NW, window=pars_name_label)
         
     pars_num_label = Label(top, bd=0, text="value",width=8, relief=FLAT, bg='#4e7a7a')
-    pars_num_label_window = canvas.create_window(100, 400,anchor=NW, window=pars_num_label)
+    pars_num_label_window = canvas.create_window(100, 600,anchor=NW, window=pars_num_label)
 
     paras_list = OrderedDict()
     
     enterpars_button= Button(top, text="+",font=buttonFont, height=1, padx=1.5,pady=1.5,width=2,
                              command = lambda:create_paras(top, pars_entry))
     enterpars_button.configure(activebackground="#f2ec8a")
-    enterpars_button_window = canvas.create_window(100,370, anchor=NW, window=enterpars_button)
+    enterpars_button_window = canvas.create_window(100,570, anchor=NW, window=enterpars_button)
                       
  
     vars_label = Label( top, text=" Number of Variables: ",font=labelFont, width=20, relief=FLAT, background='#b74514')
-    vars_label_window = canvas.create_window(430, 340, anchor=NW, window=vars_label)
+    vars_label_window = canvas.create_window(430, 540, anchor=NW, window=vars_label)
     
     vars_entry = Entry(top, bd=1, width=5, bg="#b74514")
-    vars_entry_window = canvas.create_window(430, 370, anchor=NW, window=vars_entry)
+    vars_entry_window = canvas.create_window(430, 570, anchor=NW, window=vars_entry)
         
     eqn_ic_list = OrderedDict()
     
     entervars_button= Button(top, text="+",font=buttonFont, height=1, padx=1.5,pady=1.5,width=2,
                              command = lambda:create_sys_input_box(top, vars_entry))
     entervars_button.configure(activebackground="#b74514")
-    entervars_button_window = canvas.create_window(490, 370, anchor=NW, window=entervars_button)
+    entervars_button_window = canvas.create_window(490, 570, anchor=NW, window=entervars_button)
 
     paras_list.update()
     eqn_ic_list.update()
@@ -111,13 +111,13 @@ def main():
                          width=15, relief=RAISED,bg="#4643db",
                          command = coding_instruction)
 #    model_button.configure(activebackground='#4643db')
-    model_label_window = canvas.create_window(750, 220, anchor=NW, window=model_button)
+    model_label_window = canvas.create_window(750, 580, anchor=NW, window=model_button)
     
     
     final_button= Button(top, text="Start Graphing",font=buttonFont, height=1, padx=1.5,pady=1.5,width=15,
                              command = ext_entry)
     final_button.flash()
-    final_button_window = canvas.create_window(750, 270, anchor=NW, window=final_button)
+    final_button_window = canvas.create_window(750, 540, anchor=NW, window=final_button)
     canvas.pack()    
     top.mainloop()
 
@@ -192,7 +192,7 @@ def coding_instruction ():
     eqFont=tkFont.Font(family="Helvetica", size=20)
 
     canvas = Canvas(new, width=1000, height=1000, bg = '#8b89ed')
-    canvas.create_text(300,150,text="1) Open ‘function.py’ script in terminal by typing in:"+"\n"
+    canvas.create_text(500,250,text="1) Open ‘function.py’ script in terminal by typing in:"+"\n"
                        +"    open /anaconda2/envs/SIR/lib/python2.7/site-packages/functions.py"+"\n"
                        +"2) Once in ‘function.py’, scroll down to method ‘ext_solvr’,"+"\n"
                        +"    type in the values of your parameters in P[], in the order of the parameter list"+"\n"
@@ -212,17 +212,18 @@ def coding_instruction ():
                        +"6) Go back to the 'Beyond SIR' window. Click on 'Start Graphing'."+"\n"
                        +"    Save your graph with a proper title."
                        ,font=labelFont,justify=LEFT)
-    example_img1 = PIL.Image.open("exampleImg_1.png")
-    photo1 = PIL.ImageTk.PhotoImage(example_img1)
-    canvas.create_image(50, 290, anchor=NW, image=photo1)
-
-    example_img2 = PIL.Image.open("exampleImg_2.png")    
-    photo2 = PIL.ImageTk.PhotoImage(example_img2)
-    canvas.create_image(50, 490, anchor=NW, image=photo2)
     
-    example_img3 = PIL.Image.open("exampleImg_3.png")    
-    photo3 = PIL.ImageTk.PhotoImage(example_img3)
-    canvas.create_image(350, 490, anchor=NW, image=photo3)
+    #example_img1 = PIL.Image.open("exampleImg_1.png")
+    #photo1 = PIL.ImageTk.PhotoImage(example_img1)
+    #canvas.create_image(50, 290, anchor=NW, image=photo1)
+
+    #example_img2 = PIL.Image.open("exampleImg_2.png")    
+    #photo2 = PIL.ImageTk.PhotoImage(example_img2)
+    #canvas.create_image(50, 490, anchor=NW, image=photo2)
+    
+    #example_img3 = PIL.Image.open("exampleImg_3.png")    
+    #photo3 = PIL.ImageTk.PhotoImage(example_img3)
+    #canvas.create_image(350, 490, anchor=NW, image=photo3)
     
     canvas.pack()
     new.mainloop()
