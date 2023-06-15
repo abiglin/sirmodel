@@ -10,6 +10,7 @@ INSTRUCTIONS: Copy each line of code into the Anaconda command prompt app one at
 === Installation (for instructors/administrators) ===
 
 conda install -c anaconda git
+
 [This loads the git package into Anaconda. It may be that git is already installed. In that case, disregard this line of code.]
 
 conda create --name py2 python=2.7
